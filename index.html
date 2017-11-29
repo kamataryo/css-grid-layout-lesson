@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid Layout Lesson</title>
+  <style media="screen">
+    .grid {
+      display: grid;
+      grid-template-columns: 100px 1fr 50px;
+      grid-template-rows: 100px 1fr 50px;
+    }
+
+    .header {
+      grid-row: 1;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .aside {
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column: 1;
+    }
+
+    .main {
+      grid-column: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    .footer {
+      grid-row: 3;
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+    }
+
+    body>* {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body class="grid">
+  <header class="header">ヘッダ</header>
+  <aside class="aside">サイドバー</aside>
+  <main class="main">メイン</main>
+  <footer class="footer">フッター</footer>
+</body>
+
+</html>
